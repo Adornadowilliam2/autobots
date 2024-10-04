@@ -6,9 +6,9 @@ export default function Optimus() {
   return (
     <>
       <Navbar />
-      <div>
+      <main>
         <img src={data[0].image} alt={data[0].name} />
-      </div>
+      </main>
       <h1>{data[0].name + " Prime"}</h1>
       <img src={data[0].altmode} alt="altmode" width="100%" />
       <p>{data[0].description}</p>

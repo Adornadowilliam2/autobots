@@ -11,8 +11,12 @@ export default function Navbar() {
         </Link>
         <ul>
           {data.map((item) => (
-            <Link to={`/${item.name.toLowerCase()}`} key={item.id}>
-              <li>{item.name}</li>
+            <Link
+              to={`/${item.name.toLowerCase()}`}
+              key={item.id}
+              className="navbar-child"
+            >
+              {item.name}
             </Link>
           ))}
         </ul>

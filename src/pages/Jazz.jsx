@@ -6,9 +6,9 @@ export default function Jazz() {
   return (
     <>
       <Navbar />
-      <div>
+      <main>
         <img src={data[4].image} alt={data[4].name} />
-      </div>
+      </main>
       <h1>{data[4].name}</h1>
       <img src={data[4].altmode} alt="altmode" width="100%" />
       <p>{data[4].description}</p>

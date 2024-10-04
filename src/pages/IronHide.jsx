@@ -6,9 +6,9 @@ export default function IronHide() {
   return (
     <>
       <Navbar />
-      <div>
+      <main>
         <img src={data[3].image} alt={data[3].name} />
-      </div>
+      </main>
       <h1>{data[3].name}</h1>
       <img src={data[3].altmode} alt="altmode" width="100%" />
       <p>{data[3].description}</p>
