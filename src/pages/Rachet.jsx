@@ -7,7 +7,11 @@ export default function Rachet() {
     <>
       <Navbar />
       <main>
-        <img src={data[2].image} alt={data[2].name} />
+        <img
+          src={data[2].image}
+          alt={data[2].name}
+          style={{ filter: "drop-shadow(10px 10px 0 " + data[2].color + ")" }}
+        />
       </main>
       <h1>{data[2].name}</h1>
       <img src={data[2].altmode} alt="altmode" width="100%" />

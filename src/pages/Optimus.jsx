@@ -7,7 +7,11 @@ export default function Optimus() {
     <>
       <Navbar />
       <main>
-        <img src={data[0].image} alt={data[0].name} />
+        <img
+          src={data[0].image}
+          alt={data[0].name}
+          style={{ filter: "drop-shadow(10px 10px 0 " + data[0].color + ")" }}
+        />
       </main>
       <h1>{data[0].name + " Prime"}</h1>
       <img src={data[0].altmode} alt="altmode" width="100%" />
