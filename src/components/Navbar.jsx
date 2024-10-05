@@ -1,26 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { data } from "../index";
+import { Dialog, DialogTitle, DialogContent, IconButton } from "@mui/material";
+import { Menu, Close } from "@mui/icons-material"; // Use Material Icons
 
-export default function Navbar() {
+const Navbar = ({ data }) => {
+  const [open, setOpen] = useState(false);
+
+  const toggleDialog = () => {
+    setOpen(!open);
+  };
+
   return (
-    <>
-      <nav>
-        <Link to="/">
-          <h1>Autobots</h1>
-        </Link>
-        <ul>
-          {data.map((item) => (
-            <Link
-              to={`/${item.name.toLowerCase()}`}
-              key={item.id}
-              className="navbar-child"
-            >
-              {item.name}
-            </Link>
-          ))}
-        </ul>
-      </nav>
-    </>
+    <nav>
+      <Link to="/">
+        <h1>Autobots</h1>
+      </Link>
+      <IconButton onClick={toggleDialog} className="hamburger">
+        <Menu />
+      </IconButton>
+
+      <Dialog open={open} onClose={toggleDialog} maxWidth="xs" fullWidth>
+        <DialogTitle>
+          Menu
+          <IconButton
+            onClick={toggleDialog}
+            style={{ position: "absolute", right: 8, top: 8 }}
+          >
+            <Close />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent>
+          <ul>
+            {data.map((item) => (
+              <li key={item.id}>
+                <Link
+                  to={`/${item.name.toLowerCase()}`}
+                  className="navbar-child"
+                  onClick={toggleDialog}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </DialogContent>
+      </Dialog>
+    </nav>
   );
-}
+};
+
+export default Navbar;

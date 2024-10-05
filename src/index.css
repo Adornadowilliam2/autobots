@@ -59,28 +59,7 @@ a {
   font-size: 20px;
   margin-top: 10px;
   transition: all 0.3s ease-in-out;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-nav h1 {
-  font-size: 24px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
+  text-align: center;
 }
 
 nav ul .navbar-child {
