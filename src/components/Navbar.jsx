@@ -15,7 +15,11 @@ const Navbar = ({ data }) => {
       <Link to="/">
         <h1>Autobots</h1>
       </Link>
-      <IconButton onClick={toggleDialog} className="hamburger">
+      <IconButton
+        onClick={toggleDialog}
+        className="hamburger"
+        style={{ color: "white" }}
+      >
         <Menu />
       </IconButton>
 
