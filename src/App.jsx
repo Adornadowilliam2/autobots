@@ -6,6 +6,7 @@ import Rachet from "./pages/Rachet";
 import IronHide from "./pages/IronHide";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Jazz from "./pages/Jazz";
+import Audio from "./components/Audio";
 
 const router = createBrowserRouter([
   { path: "/", element: <Autobots /> },
@@ -17,7 +18,12 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <Audio />
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;
